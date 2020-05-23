@@ -13,11 +13,11 @@ function search() {
         window.alert("Você será rerirecionado para o conteúdo " + energia[2]);
     }
     if(document.getElementById("conteudo").value == energia[3]){
-        location.replace("https://xmdnx.github.io/UnipAps/energias/hidreletrica11.html");
+        location.replace("https://xmdnx.github.io/UnipAps/energias/biocombustiveis.html");
         window.alert("Você será rerirecionado para o conteúdo " + energia[3]);
     }
     if(document.getElementById("conteudo").value == energia[4]){
-        location.replace("https://xmdnx.github.io/UnipAps/energias/hidreletrica11.html");
+        location.replace("https://xmdnx.github.io/UnipAps/energias/geotermica.html");
         window.alert("Você será rerirecionado para o conteúdo " + energia[4]);
     }
     
