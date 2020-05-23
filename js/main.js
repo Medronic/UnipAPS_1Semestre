@@ -1,7 +1,7 @@
 function search() {
     var energia = ["Hidrelétrica", "Solar", "Eólica", "Biocombustíveis", "Geotérmica"];
     if(document.getElementById("conteudo").value == energia[0]){
-        location.replace("https://xmdnx.github.io/UnipAps/energias/hidreletrica.html");
+        window.open('https://xmdnx.github.io/UnipAps/energias/hidreletrica.html', '_blank');
         window.alert("Você será rerirecionado para o conteúdo " + energia[0]);
     }
     if(document.getElementById("conteudo").value == energia[1]){
@@ -26,12 +26,4 @@ function search() {
     window.alert("Ops, o conteúdo que você está procurando não existe! Mas após clicar em ok, irá ser exibido uma nova janela para lhe orientar."); 
     }*/
     
-}
-
-function postagem_data(){
-    var data = new Date()
-    var dia = data.getDate();
-    var mes = "05"
-    var ano = data.getFullYear();
-    document.getElementById("postagem_data").innerHTML = "Postado: " + dia + "/" + mes + "/" + ano;
 }
