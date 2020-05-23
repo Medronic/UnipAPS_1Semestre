@@ -26,11 +26,33 @@
 
     <link rel="stylesheet" href="css/bootstrap.css">
     <link href="css/style.css" rel="stylesheet">
+
     <script src="js/bootstrap.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="js/bootstrap.bundle.js"></script>
+    <script src="js/main.js"></script>
 </head>
 <body>
+
+    <div class="modal fade" id="TiposDeEnergiaModal" tabindex="-1" role="dialog" aria-labelledby="TiposDeEnergiaModal" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="TiposDeEnergiaModal">Termos de Pesquisa</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <p>Segue abaixo algumas tags que ajudam a procura pelo conteúdo de certa postagem.</p>
+            <p id="energia_tags"></p>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
 
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <!--<a class="navbar-brand" href="../index.html">Navbar</a>-->
@@ -44,9 +66,9 @@
               <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Link</a>
+              <a class="nav-link" href="sobre_nos.html">Sobre Nós</a>
             </li>
-            <li class="nav-item dropdown">
+            <!--<li class="nav-item dropdown">
               <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 Dropdown
               </a>
@@ -56,14 +78,11 @@
                 <div class="dropdown-divider"></div>
                 <a class="dropdown-item" href="#">Something else here</a>
               </div>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link disabled" href="#">Disabled</a>
-            </li>
+            </li>-->
           </ul>
-          <form class="form-inline my-2 my-lg-0">
-            <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+          <form name="pesquisar" onsubmit="return search()" class="form-inline my-2 my-lg-0">
+            <input id="conteudo" class="form-control mr-sm-2" type="search" placeholder="Ex: Hidrelétrica"" aria-label="Search">
+            <button type="submit" class="btn btn-outline-success my-2 my-sm-0">Procurar</button>
           </form>
         </div>
       </nav><br>
@@ -72,24 +91,25 @@
       
         <div class="jumbotron p-4 p-md-5 text-white rounded bg-dark">
           <div class="col-md-12 px-0">
-            <h1 class="display-4 font-italic">O que é Energia Hidrelétrica?</h1>
-            <p class="lead my-3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum dolore impedit quaerat suscipit, ut, dicta porro aut consectetur distinctio, nesciunt sit fuga assumenda. Autem recusandae dolor aliquam fugit placeat adipisci!</p>
-            <p class="lead mb-0"><a href="paginas/hidreletrica.html" class="text-white font-weight-bold">Continue lendo...</a></p>
+            <h1 class="display-4 font-italic">O que é Energia Elétrica?</h1>
+            <p class="lead my-3">Antes de falarmos sobre fontes de Energia Renováveis, precisamos comentar sobre a <strong>Energia Elétrica</strong> e sobre suas causas no meio ambiente</p>
+            <p class="lead mb-0"><a href="energias/hidreletrica.html" class="text-white font-weight-bold">Continue lendo...</a></p>
           </div>
         </div>
       
         <div class="row mb-2">
+
           <div class="col-md-6">
             <div class="row no-gutters border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
               <div class="col p-4 d-flex flex-column position-static">
-                <strong class="d-inline-block mb-2 text-primary">World</strong>
-                <h3 class="mb-0">Featured post</h3>
-                <div class="mb-1 text-muted">Nov 12</div>
-                <p class="card-text mb-auto">This is a wider card with supporting text below as a natural lead-in to additional content.</p>
-                <a href="#" class="stretched-link">Continue reading</a>
+                <strong class="d-inline-block mb-2 text-primary">Energias Renováveis</strong>
+                <h3 class="mb-0">Energia Hidrelétrica</h3>
+                <div class="mb-1 text-muted">19/05</div>
+                <p class="card-text mb-auto">A <strong>energia hidrelétrica</strong> é aquela obtida pela força das águas.</p>
+                <a href="energias/hidreletrica.html" class="stretched-link">Continue lendo...</a>
               </div>
               <div class="col-auto d-none d-lg-block">
-                <svg class="bd-placeholder-img" width="200" height="250" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: Thumbnail"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"/><text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text></svg>
+                <img src="img/thumbnails/hidreletrica.jpg" alt="Energia Hidrelétrica" width="200" height="250">
               </div>
             </div>
           </div>
@@ -97,14 +117,14 @@
           <div class="col-md-6">
             <div class="row no-gutters border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
               <div class="col p-4 d-flex flex-column position-static">
-                <strong class="d-inline-block mb-2 text-primary">World</strong>
-                <h3 class="mb-0">Featured post</h3>
-                <div class="mb-1 text-muted">Nov 12</div>
-                <p class="card-text mb-auto">This is a wider card with supporting text below as a natural lead-in to additional content.</p>
-                <a href="#" class="stretched-link">Continue reading</a>
+                <strong class="d-inline-block mb-2 text-primary">Energias Renováveis</strong>
+                <h3 class="mb-0">Energia Solar</h3>
+                <div class="mb-1 text-muted">22/05</div>
+                <p class="card-text mb-auto">A energia solar é proveniente da luz e do calor do Sol, os quais são convertidos em eletricidade. Existem dois tipos de energia solar: fotovoltaica e térmica.</p>
+                <a href="energias/solar.html" class="stretched-link">Continue lendo...</a>
               </div>
               <div class="col-auto d-none d-lg-block">
-                <svg class="bd-placeholder-img" width="200" height="250" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: Thumbnail"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"/><text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text></svg>
+                <img src="img/thumbnails/solar.jpeg" alt="Energia Hidrelétrica" width="200" height="250">
               </div>
             </div>
           </div>
@@ -112,14 +132,14 @@
           <div class="col-md-6">
             <div class="row no-gutters border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
               <div class="col p-4 d-flex flex-column position-static">
-                <strong class="d-inline-block mb-2 text-primary">World</strong>
-                <h3 class="mb-0">Featured post</h3>
+                <strong class="d-inline-block mb-2 text-primary">Energias Renováveis</strong>
+                <h3 class="mb-0">Energia Eólica</h3>
                 <div class="mb-1 text-muted">Nov 12</div>
                 <p class="card-text mb-auto">This is a wider card with supporting text below as a natural lead-in to additional content.</p>
-                <a href="#" class="stretched-link">Continue reading</a>
+                <a href="energias/eolica.html" class="stretched-link">Continue lendo...</a>
               </div>
               <div class="col-auto d-none d-lg-block">
-                <svg class="bd-placeholder-img" width="200" height="250" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: Thumbnail"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"/><text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text></svg>
+                <img src="img/thumbnails/eolica.jpg" alt="Energia Hidrelétrica" width="200" height="250">
               </div>
             </div>
           </div>
@@ -127,11 +147,11 @@
           <div class="col-md-6">
             <div class="row no-gutters border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
               <div class="col p-4 d-flex flex-column position-static">
-                <strong class="d-inline-block mb-2 text-primary">World</strong>
+                <strong class="d-inline-block mb-2 text-primary">Energias Renováveis</strong>
                 <h3 class="mb-0">Featured post</h3>
                 <div class="mb-1 text-muted">Nov 12</div>
                 <p class="card-text mb-auto">This is a wider card with supporting text below as a natural lead-in to additional content.</p>
-                <a href="#" class="stretched-link">Continue reading</a>
+                <a href="#" class="stretched-link">Continue lendo...</a>
               </div>
               <div class="col-auto d-none d-lg-block">
                 <svg class="bd-placeholder-img" width="200" height="250" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: Thumbnail"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"/><text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text></svg>
@@ -146,7 +166,7 @@
                 <h3 class="mb-0">Post title</h3>
                 <div class="mb-1 text-muted">Nov 11</div>
                 <p class="mb-auto">This is a wider card with supporting text below as a natural lead-in to additional content.</p>
-                <a href="#" class="stretched-link">Continue reading</a>
+                <a href="#" class="stretched-link">Continue lendo...</a>
               </div>
               <div class="col-auto d-none d-lg-block">
                 <svg class="bd-placeholder-img" width="200" height="250" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: Thumbnail"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"/><text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text></svg>
@@ -155,7 +175,7 @@
           </div>
 
         </div>
-      </div>
+      </div><!-- //Div Cards-->
       
       <main role="main" class="container">
         <div class="row">
@@ -238,9 +258,9 @@
       </main>
 
     <footer class="blog-footer">
-        <p>Blog template built for <a href="https://getbootstrap.com/">Bootstrap</a> by <a href="https://twitter.com/mdo">@mdo</a>.</p>
+        <!--<p>Blog template built for <a href="https://getbootstrap.com/">Bootstrap</a> by <a href="https://twitter.com/mdo">@mdo</a>.</p>-->
         <p>
-          <a href="#">Back to top</a>
+          <a href="#">Voltar ao Topo da Página</a>
         </p>
     </footer>
 
