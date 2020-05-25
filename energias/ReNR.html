@@ -24,49 +24,34 @@
     <meta name="theme-color" content="#ffffff">
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="../js/popper.min.js"></script>
     <script src="../js/bootstrap.js"></script>
     <script src="../js/bootstrap.bundle.js"></script>
     <script src="../js/main.js"></script>
 
     <link rel="stylesheet" href="../css/bootstrap.css">
-    <link href="../css/style.css" rel="stylesheet">
+    <link rel="stylesheet" href="../css/style.css">
 </head>
 <body>
 
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-      <a class="navbar-brand" href="../index.html">
-        <img src="../img/logos/logo.png" width="120" height="40" alt="" loading="lazy">
-      </a>
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-    
-      <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav mr-auto">
-          <li class="nav-item">
-            <a class="nav-link" href="../index.html">Página Inicial <span class="sr-only">(current)</span></a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="../sobre_nos.html">Sobre Nós</a>
-          </li>
-          <!--<li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                Dropdown
-              </a>
-              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                <a class="dropdown-item" href="#">Action</a>
-                <a class="dropdown-item" href="#">Another action</a>
-                <div class="dropdown-divider"></div>
-                <a class="dropdown-item" href="#">Something else here</a>
-              </div>
-            </li>-->
-        </ul>
-        <form name="pesquisar" onsubmit="return search()" class="form-inline my-2 my-lg-0">
-          <input id="conteudo" class="form-control mr-sm-2" type="search" placeholder="Ex: Hidrelétrica"" aria-label="Search">
-          <button type="submit" class="btn btn-outline-success my-2 my-sm-0">Procurar</button>
-        </form>
+      <div class="d-flex flex-column flex-md-row align-items-center p-3 px-md-4 mb-3 bg-dark border-bottom shadow-sm">
+        <h5 class="my-0 mr-md-auto"><a class="navbar-brand" href="../index.html">
+          <img src="../img/logos/logo.png" width="120" height="40" alt="Logo">
+        </a></h5>
+        <nav class="my-2 my-md-0 mr-md-3">
+          <!--<a class="p-2 text-dark" href="#">Features</a>-->
+        </nav>
+        <div class="btn-group dropleft">
+          <button type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Menu
+          </button>
+          <div class="dropdown-menu">
+            <a class="dropdown-item" href="../index.html">Página Inicial</a>
+            <a class="dropdown-item" href="../curiosidades.html">Curiosidades</a>
+            <a class="dropdown-item" href="../sobre_nos.html">Sobre Nós</a>
+          </div>
+        </div>
       </div>
-    </nav><br>
 
       <main role="main" class="container">
         <div class="row">
@@ -164,7 +149,7 @@
                 O descarte de dejetos radioativos e o risco de acidentes, como o ocorrido em Chernobyl (1986) preocupam ambientalistas e governos.
             </p>
               
-              <p class="blog-post-meta" id="publicado"></p>
+              <p class="blog-post-meta" id="publicado">Postado: 22/05</p>
             </div>
       
           </div><!-- /.blog-main -->
@@ -182,8 +167,8 @@
 
       </main>
 
-    <footer class="blog-footer">
-        <!--<p>Blog template built for <a href="https://getbootstrap.com/">Bootstrap</a> by <a href="https://twitter.com/mdo">@mdo</a>.</p>-->
+      <footer class="blog-footer">
+        <p><strong>CREATED BY TEAM</strong> <img src="../img/logos/logoV2.png" width="120" height="40" alt="Learning Team"></a>
         <p>
           <a href="#">Voltar ao Topo da Página</a>
         </p>
